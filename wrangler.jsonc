@@ -1,8 +1,7 @@
-// wrangler.jsonc
 {
-  "name": "zarapay-web",
+  "name": "zarapay",
   "compatibility_date": "2025-07-07",
   "site": {
-    "bucket": "./"
+    "bucket": "./public"
   }
 }
