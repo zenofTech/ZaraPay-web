@@ -1,8 +1,8 @@
 // wrangler.jsonc
 {
-  "name": "zarapay", // Your project name
+  "name": "zarapay-web",
   "compatibility_date": "2025-07-07",
   "site": {
-    "bucket": "./" // This tells Wrangler that your static assets are in the current directory
+    "bucket": "./"
   }
 }
