@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./asset/img/favicon.png" type="image/x-icon">
+    <title>ZaraPay - Secure Mobile Payments</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a1a2a 0%, #1a3a5a 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .logo-container {
+            position: relative;
+            width: 320px;
+            height: 320px;
+            margin: 0 auto 50px;
+        }
+
+        .logo-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 160px;
+            height: 160px;
+            background: linear-gradient(135deg, #005c9e 0%, #00aaff 100%);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 30px rgba(0, 170, 255, 0.5);
+            z-index: 10;
+            animation: pulse 3s infinite;
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: 800;
+            color: white;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+
+        .service-ring {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .service-item {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 15px;
+            transition: all 0.4s ease;
+            transform-origin: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            cursor: pointer;
+        }
+
+        .service-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(0, 170, 255, 0.4);
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 92, 158, 0.3);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #00aaff;
+        }
+
+        .service-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .service-desc {
+            font-size: 12px;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, #00aaff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 16px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00aaff 0%, #005c9e 100%);
+            color: white;
+            box-shadow: 0 10px 20px rgba(0, 92, 158, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(0, 92, 158, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #00aaff;
+            border: 2px solid #00aaff;
+        }
+
+        .btn-outline:hover {
+            background: rgba(0, 170, 255, 0.1);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 170, 255, 0.5); }
+            70% { box-shadow: 0 0 0 20px rgba(0, 170, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 170, 255, 0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .logo-container {
+                width: 280px;
+                height: 280px;
+            }
+            
+            .service-item {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn {
+                width: 100%;
+                padding: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-container {
+                width: 240px;
+                height: 240px;
+            }
+            
+            .service-item {
+                width: 85px;
+                height: 85px;
+                padding: 10px;
+            }
+            
+            .service-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+            
+            .service-title {
+                font-size: 16px;
+            }
+            
+            .service-desc {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <div class="logo-container">
+                <div class="logo-center floating">
+                    <div class="logo-text">
+                        ZaraPay
+                        <span>Secure. Simple. Seamless</span>
+                    </div>
+                </div>
+                
+                <div class="service-ring"></div>
+                
+                <!-- Secure Service -->
+                <div class="service-item" style="top: 20px; left: 100px;">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="service-title">Secure</div>
+                    <div class="service-desc">Bank-grade encryption</div>
+                </div>
+                
+                <!-- Simple Service -->
+                <div class="service-item" style="top: 200px; left: 20px;">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="service-title">Simple</div>
+                    <div class="service-desc">Easy to use interface</div>
+                </div>
+                
+                <!-- Seamless Service -->
+                <div class="service-item" style="top: 200px; right: 20px;">
+                    <div class="service-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="service-title">Seamless</div>
+                    <div class="service-desc">Integrated experience</div>
+                </div>
+            </div>
+            
+            <div class="hero-content">
+                <h1>Revolutionizing Digital Payments</h1>
+                <p>ZaraPay provides a next-generation payment platform that combines cutting-edge security with effortless user experience. Send, receive, and manage your finances with confidence.</p>
+                
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-download"></i> &nbsp; Get the App
+                    </a>
+                    <a href="support@zarapay.net" class="btn btn-outline">
+                        <i class="fa-regular fa-envelope-open"></i> &nbsp; Email
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+        // Add rotation animation to service items
+        document.addEventListener('DOMContentLoaded', function() {
+            const serviceItems = document.querySelectorAll('.service-item');
+            let angle = 0;
+            
+            function rotateItems() {
+                angle = (angle + 0.2) % 360;
+                
+                serviceItems.forEach((item, index) => {
+                    const radius = 140;
+                    const itemAngle = angle + (index * 120);
+                    const radian = itemAngle * (Math.PI / 180);
+                    
+                    const x = Math.cos(radian) * radius;
+                    const y = Math.sin(radian) * radius;
+                    
+                    item.style.transform = `translate(${x}px, ${y}px) rotate(${-angle}deg)`;
+                });
+                
+                requestAnimationFrame(rotateItems);
+            }
+            
+            rotateItems();
+        });
+    </script>
+</body>
+</html>
