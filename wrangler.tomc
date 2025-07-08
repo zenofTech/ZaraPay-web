@@ -2,6 +2,6 @@
   "name": "zarapay-web",
   "compatibility_date": "2025-07-07",
   "site": {
-    "bucket": "./public"
+    "bucket": "./"
   }
 }
