@@ -3,68 +3,372 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./asset/img/favicon.png" type="image/x-icon">
     <title>ZaraPay - Secure Mobile Payments</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./asset/css/index.css">
-       
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="./asset/css/index.css">
+         <link rel="icon" href="./asset/img/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <div class="container">
-        <section class="hero">
-            <div class="logo-container">
-                <div class="logo-center floating">
-                    <div class="logo-text">
-                        ZaraPay
-                        <span>Secure. Simple. Seamless</span>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <div class="logo-img">
+                        <img src="./asset/img/logo.png" alt="ZaraPay Logo">
                     </div>
+                    <div class="logo-text">Zara<span>Pay</span></div>
+                </div>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#" class="btn btn-outline">Login</a></li>
+                    <li><a href="#" class="btn btn-primary">Create Account</a></li>
+                </ul>
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Updated Hero Section with Left-Aligned Content -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Secure, Simple, <span>Seamless Payments</span></h1>
+                    <p>ZaraPay provides a next-generation payment platform that combines cutting-edge security with effortless user experience. Send, receive, and manage your finances with confidence</p>
+                    
+                    <div style="margin-top: 50px; display: flex; justify-content: center; flex-wrap: wrap;">
+                         <a href="#" class="btn-app">
+                        <i class="fab fa-google-play"></i>
+                        <div>
+                            <div style="font-size: 12px;">Get it on</div>
+                            <div>Google Play</div>
+                        </div>
+                    </a>
+                    <a href="#" class="btn-app">
+                        <i class="fab fa-apple"></i>
+                        <div>
+                            <div style="font-size: 12px;">Download on the</div>
+                            <div>App Store</div>
+                        </div>
+                    </a>
+                   
+                </div>
                 </div>
                 
-                <div class="service-ring"></div>
-                
-                <!-- Secure Service -->
-                <div class="service-item" style="top: 20px; left: 100px;">
-                    <div class="service-icon">
+                <div class="hero-visual">
+                    <div class="logo-container">
+                        <div class="logo-center floating">
+                            <div class="logo-center-text">
+                                ZaraPay
+                                <span>Secure. Simple. Seamless</span>
+                            </div>
+                        </div>
+                        
+                        <div class="service-ring"></div>
+                        
+                        <!-- Secure Service -->
+                        <div class="service-item" style="top: 20px; left: 100px;">
+                            <div class="service-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="service-title">Secure</div>
+                            <div class="service-desc">Bank-grade encryption</div>
+                        </div>
+                        
+                        <!-- Simple Service -->
+                        <div class="service-item" style="top: 200px; left: 20px;">
+                            <div class="service-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="service-title">Simple</div>
+                            <div class="service-desc">Easy to use interface</div>
+                        </div>
+                        
+                        <!-- Seamless Service -->
+                        <div class="service-item" style="top: 200px; right: 20px;">
+                            <div class="service-icon">
+                                <i class="fas fa-sync-alt"></i>
+                            </div>
+                            <div class="service-title">Seamless</div>
+                            <div class="service-desc">Integrated experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">Naira/USD</div>
+                    <div class="stat-label">Debit Card</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">Unlimited</div>
+                    <div class="stat-label">Transactions</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">Bill</div>
+                    <div class="stat-label">Payments </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">Earn</div>
+                    <div class="stat-label">Daily</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose ZaraPay</h2>
+                <p>Experience the future of digital payments with our innovative features</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" style="animation-delay: 0.1s">
+                    <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <div class="service-title">Secure</div>
-                    <div class="service-desc">Bank-grade encryption</div>
+                    <h3>Bank-Level Security</h3>
+                    <p>Military-grade encryption and multi-factor authentication to keep your money safe.</p>
                 </div>
-                
-                <!-- Simple Service -->
-                <div class="service-item" style="top: 200px; left: 20px;">
-                    <div class="service-icon">
+
+                <div class="feature-card" style="animation-delay: 0.2s">
+                    <div class="feature-icon">
                         <i class="fas fa-bolt"></i>
                     </div>
-                    <div class="service-title">Simple</div>
-                    <div class="service-desc">Easy to use interface</div>
+                    <h3>Instant Transfers</h3>
+                    <p>Send and receive money in seconds, 24/7, anywhere in the world.</p>
                 </div>
-                
-                <!-- Seamless Service -->
-                <div class="service-item" style="top: 200px; right: 20px;">
-                    <div class="service-icon">
-                        <i class="fas fa-sync-alt"></i>
+
+                <div class="feature-card" style="animation-delay: 0.3s">
+                    <div class="feature-icon">
+                        <i class="fas fa-percentage"></i>
                     </div>
-                    <div class="service-title">Seamless</div>
-                    <div class="service-desc">Integrated experience</div>
+                    <h3>Low Fees</h3>
+                    <p>Pay minimal fees compared to traditional banking and payment services.</p>
+                </div>
+
+                <div class="feature-card" style="animation-delay: 0.4s">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Global Coverage</h3>
+                    <p>Send and receive money in over 50 countries with 50+ currencies.</p>
+                </div>
+
+                <div class="feature-card" style="animation-delay: 0.5s">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App</h3>
+                    <p>Full-featured mobile app for iOS and Android to manage your money on the go.</p>
+                </div>
+
+                <div class="feature-card" style="animation-delay: 0.6s">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated support team is available around the clock to assist you.</p>
                 </div>
             </div>
-            
-            <div class="hero-content">
-                <h1>Revolutionizing Digital Payments</h1>
-                <p>ZaraPay provides a next-generation payment platform that combines cutting-edge security with effortless user experience. Send, receive, and manage your finances with confidence.</p>
-                
-                <div class="cta-buttons">
-                    <a href="#" class="btn btn-primary">
-                        <i class="fas fa-download"></i> &nbsp; Get the App
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How ZaraPay Works</h2>
+                <p>Get started with ZaraPay in just a few simple steps</p>
+            </div>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Create Account</h3>
+                    <p>Sign up in minutes with your email or phone number</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>KYC</h3>
+                    <p>Unlock secure transactions, full fintech app features.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Send & Receive</h3>
+                    <p>Start sending and receiving money instantly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-extra">
+        <div class="container">
+            <div class="features-extra-content">
+                <div class="features-extra-text">
+                    <h2>Do more with <span>your money</span></h2>
+                    <p>More than just transferring money. You can do all kinds of cool stuff - pay your bills, make purchases, save and earn, all financial needs in one ZaraPay app.</p>
+
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i> Pay utility bills and subscriptions in seconds</li>
+                        <li><i class="fas fa-check-circle"></i> Make purchases at thousands of online stores</li>
+                        <li><i class="fas fa-check-circle"></i> Set savings goals with automatic transfers</li>
+                        <li><i class="fas fa-check-circle"></i> Earn interest on your account balance</li>
+                        <li><i class="fas fa-check-circle"></i> Invest in stocks and cryptocurrencies</li>
+                        <li><i class="fas fa-check-circle"></i> Track all your finances in one place</li>
+                    </ul>
+
+                    <div class="hero-buttons" style="margin-top: 30px;">
+                        <a href="#" class="btn btn-primary"> <i class="fas fa-download"></i> &nbsp; Download App
                     </a>
-                    <a href="support@zarapay.net" class="btn btn-outline">
-                        <i class="fa-regular fa-envelope-open"></i> &nbsp; Email
+                        <a href="#" class="btn btn-outline">See All Features  &nbsp;  <i class="fas fa-arrow-right"></i> </a>
+                    </div>
+                </div>
+
+                <div class="features-extra-image">
+                    <img src="./asset/img/ZaraPay-xtra.png" alt="ZaraPay App Features">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="new-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Beyond Payments: <span>New Features</span></h2>
+                <p>ZaraPay continuously innovates to meet all your financial needs in one place.</p>
+            </div>
+
+            <div class="new-feature-card">
+                <div class="new-feature-text">
+                    <h3>Naira and USD Debit Cards</h3>
+                    <p>Get your virtual or physical Naira and USD debit cards. Enjoy seamless local and international transactions, online purchases, and ATM withdrawals wherever you are.</p>
+                    <a href="#" class="btn btn-primary" style="background: var(--white); color: var(--primary);">Order Your Card</a>
+                </div>
+                <div class="new-feature-image animated-card">
+                    <img src="./asset/img/ZaraPay-card.png" alt="Naira and USD Debit Cards">
+                </div>
+            </div>
+
+            <div class="new-feature-card">
+                <div class="new-feature-text">
+                    <h3>Seamless Foreign Currency Exchange</h3>
+                    <p>Exchange major foreign currencies at competitive rates, right within your ZaraPay app. Perfect for travelers, international businesses, and global transactions.</p>
+                    <a href="#" class="btn btn-primary" style="background: var(--white); color: var(--primary);">Exchange Now</a>
+                </div>
+                <div class="new-feature-image animated-exchange">
+                    <img src="./asset/img/zarapay-xchange.png" alt="Foreign Currency Exchange">
+                </div>
+            </div>
+
+            <div class="new-feature-card">
+                <div class="new-feature-text">
+                    <h3>ZaraPay POS Machine</h3>
+                    <p>Empower your business with the ZaraPay POS machine. Accept payments from customers quickly and securely, track sales, and manage your inventory with ease. Ideal for merchants of all sizes.</p>
+                    <a href="#" class="btn btn-primary" style="background: var(--white); color: var(--primary);">Get a POS</a>
+                </div>
+                <div class="new-feature-image animated-pos">
+                    <img src="https://images.unsplash.com/photo-1601614979313-09854497a7a5?auto=format&fit=crop&q=80&w=600&h=400&crop=entropy&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.0.3" alt="ZaraPay POS Machine">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Simplify <span style="color:#FF9800">Your Payments?</span></h2>
+                <p>Join over 5 million users who trust ZaraPay for their financial transactions</p>
+                <a href="zarapay.net" class="btn btn-primary" style="background: transparent; background: linear-gradient(135deg, var(--accent) 10%, #FF9800 100%);">Get Started for Free</a>
+
+                <div style="margin-top: 50px; display: flex; justify-content: center; flex-wrap: wrap;">
+                    <a href="#" class="btn-app">
+                        <i class="fab fa-apple"></i>
+                        <div>
+                            <div style="font-size: 12px;">Download on the</div>
+                            <div>App Store</div>
+                        </div>
+                    </a>
+                    <a href="#" class="btn-app">
+                        <i class="fab fa-google-play"></i>
+                        <div>
+                            <div style="font-size: 12px;">Get it on</div>
+                            <div>Google Play</div>
+                        </div>
                     </a>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 20px;">
+                        <div class="logo-img">
+                            <img src="./asset/img/logo.png" alt="ZaraPay Logo">
+                        </div>
+                        <div class="logo-text" >Zara<span >Pay</span></div>
+                    </div>
+                    <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 20px; max-width: 300px;">Secure, simple, and seamless payments for everyone.</p>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="#" style="color: var(--white); font-size: 20px;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: var(--white); font-size: 20px;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: var(--white); font-size: 20px;"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:support@zarapay.net" style="color: var(--white); font-size: 20px;"><i class="fa-solid fa-envelope"></i></a> 
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="#">Personal</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Enterprise</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 ZaraPay Digital Solutions Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
     <script src="./asset/js/index.js"></script>
 </body>
 </html>
